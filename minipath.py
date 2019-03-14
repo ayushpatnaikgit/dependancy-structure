@@ -9,7 +9,7 @@ repository = include_file(sys.argv[1])
 dependancy_map = open(sys.argv[2], 'w')
 dependancy_map.write("digraph G { \n") # Defining graph G
 dependancy_map.write("ranksep = 5 \n") #Rank separator
-dependancy_map.write('size = "140,50 \n') #The size of the graph
+dependancy_map.write('size = "140,50" \n') #The size of the graph
 
 brackets = ['<','"']
 def position(string): #returns the index elements in b in a string. Assuming there is only 1 present
