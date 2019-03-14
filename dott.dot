@@ -1,6 +1,6 @@
 digraph G { 
 ranksep = 5 
-size = "140,50 
+size = "140,50" 
 "Utilities/Configuration.h"->"Drivers/miniqmc.cpp"
 "config.h"->"Utilities/Configuration.h"
 "Numerics/OhmmsPETE/TinyVector.h"->"Utilities/Configuration.h"

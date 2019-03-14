@@ -51,15 +51,14 @@ def link(x):
             except:
                 continue
 
+
+#putting a condition for the user to put the entire path for the child file. 
 if 'src/' in sys.argv[3]:
     child = sys.argv[3][sys.argv[3].index('src/')+4:]
-    print(child)
 else:
     child = sys.argv[3]
-    print(child)
-link(child)
-# def recur_link():
-    
+link(child) #calling the link function that generates the graph
+
 dependancy_map.write("}") #closing the graph
 dependancy_map.close
 
