@@ -25,14 +25,10 @@ link_list = []
 def link(x):
     global link_list
     for code in repository:
-        # print(code[code.index('/')+1:code.index(':')])
         if x in code[code.index('/')+1:code.index(':')] and code not in link_list:
-            # print(code[code.index('/')+1:code.index(':')])
-            # continue
         #x = x[x.index('src')+3:] We may need this line in the next version when we don't create the temp file 
             f = (code[0:code.index(':')][::-1])
             try:
-                # g = code[code.index('include'):]
                 header = code[code.index('include'):]
                 if '.hpp' in header:
                     ending = 'pp'
@@ -42,7 +38,7 @@ def link(x):
                     ending = '.h'
                 if (f[0:f.index('/')][::-1] + '->' + header[position(header)+1:header.index(ending)+2])[-1]=='>':continue
                 k = header[position(header)+1:header.index('.h')+2]
-                # if k in system_files:
+                # if k in system_files: can be used if system files aren't needed
                 #     continue
                 edge = '"'+header[position(header)+1:header.index(ending)+2] + '"' + '->' +'"'+ code[code.index('/')+1:code.index(':')]+'"\n'
                 dependancy_map.write(edge)
