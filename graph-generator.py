@@ -1,14 +1,9 @@
-import os
-import subprocess
+###############################################################################
+#Generates dependancy tree of the entire source folder. Shows all the linkages. 
+###############################################################################
 import sys
-## creating list of include -> use subprocess call in future to avoid creating temoprary file 
-command = "grep -nr 'include' " + sys.argv[1] + "> graph.txt" #creating temporary file
-repository = os.system(command)
-fname = sys.argv[1] +"/graph.txt"
-## OPENING THE FILE THAT INCLUDES THE INCLUDES
-with open(fname) as f:
-    repository = f.readlines()
-repository = [x.strip() for x in repository]
+from include_file_gen import *
+repository = include_file(sys.argv[1])
 
 ## opening the file to write the .dot file
 dependancy_map = open(sys.argv[2], 'w')
