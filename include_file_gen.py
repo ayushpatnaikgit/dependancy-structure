@@ -1,3 +1,6 @@
+####################################################################################
+#Makes a temoprary file that is used to supply the repository to the main programs. 
+#####################################################################################
 import os
 def include_file(x):
     ## creating list of include -> use subprocess call in future to avoid creating temoprary file 
@@ -9,4 +12,3 @@ def include_file(x):
         repository = f.readlines()
     repository = [x.strip() for x in repository]
     return(repository)
-#sys.argv[1] = x

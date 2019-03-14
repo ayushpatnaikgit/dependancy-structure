@@ -1,5 +1,5 @@
 #########################################################################
-#Generates family tree of a particular file, for the entire source folder
+#Generates family tree of a particular file (child), for the entire source folder
 #########################################################################
 import sys
 from include_file_gen import *
