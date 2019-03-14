@@ -21,3 +21,7 @@ $ python graph-generator.py ../miniqmc/src example/miniqmc_family.dot ../miniqmc
 $ xdot full_family.dot <br />
 $ xdot miniqmc_family.dot <br />
 here, miniqmc is the repository and src the source folder. <br />
+
+#customizing the tree 
+
+You can play around with the size and the rankseparater to change the dimensions. It might make it easier to visualise. 
